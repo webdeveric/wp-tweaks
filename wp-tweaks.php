@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Tweaks
 Plugin Group: Configuration
-Plugin URI: http://phplug.in/
+Plugin URI: https://github.com/webdeveric/wp-tweaks
 Description: Miscellaneous WordPress tweaks
 Version: 1.0.0
 Author: Eric King
