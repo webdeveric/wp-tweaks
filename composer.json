@@ -1,9 +1,8 @@
 {
   "name": "webdeveric/wp-tweaks",
-  "version": "1.0.0",
   "description": "Miscellaneous WordPress tweaks",
   "type": "wordpress-muplugin",
-  "license": "MIT",
+  "license": "GPL-2.0+",
   "keywords": [
     "WordPress",
     "tweaks"

@@ -4,6 +4,7 @@
 
 - Remove WP logo from admin bar
 - Remove the `generator` meta tag
+- Set `$_SERVER['HTTPS'] = 'on'` if behind a load balancer and `https` is used
 
 ## Admin
 

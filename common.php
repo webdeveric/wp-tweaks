@@ -14,3 +14,8 @@ function remove_wp_logo()
 add_action('wp_before_admin_bar_render', __NAMESPACE__ . '\remove_wp_logo', 0);
 
 add_filter('the_generator', '__return_empty_string');
+
+if ( ( isset( $_SERVER['HTTP_X_FORWARDED_SCHEME'] ) && $_SERVER['HTTP_X_FORWARDED_SCHEME'] === 'https' ) ||
+     ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] )  && $_SERVER['HTTP_X_FORWARDED_PROTO']  === 'https' ) ){
+    $_SERVER['HTTPS'] = 'on';
+}
