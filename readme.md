@@ -17,6 +17,7 @@
 - Updated footer text
 - Always show the current version of WP in the footer, even if there is an upgrade available
 - Show a notice if the permissions of `wp-content` are `0777`
+- Show a notice if there is a problem with your upload directory permissions
 
 ### Login
 
