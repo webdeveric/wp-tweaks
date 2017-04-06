@@ -25,7 +25,7 @@ add_action('after_setup_theme', function () {
 add_filter('update_footer', __NAMESPACE__ . '\update_footer', PHP_INT_MAX, 1);
 
 add_action('admin_notices', function() {
-    if ( defined('WP_CONTENT_DIR') ) {
+    if ( current_user_can('manage_options') && defined('WP_CONTENT_DIR') ) {
         $content_dir_perms = fileperms(WP_CONTENT_DIR) & 0777;
 
         if ( $content_dir_perms === 0777 ) {
@@ -37,5 +37,45 @@ add_action('admin_notices', function() {
                 decoct($content_dir_perms)
             );
         }
+    }
+});
+
+add_action('admin_notices', function() {
+    if ( ! current_user_can('manage_options') ) {
+        return;
+    }
+
+    extract( wp_upload_dir() );
+
+    if ( $error ) {
+
+        $pathPermissions = '';
+
+        for ( $prevPath = '' ; $prevPath !== $path ; $prevPath = $path, $path = dirname( $path ) ) {
+            $pathPermissions .= sprintf(
+                '<tr><th>%s</th><td>%s</td></tr>',
+                $path,
+                file_exists( $path ) ? decoct( fileperms($path) & 0777 ) : 'does not exist'
+            );
+        }
+
+        printf(
+            '<div class="notice notice-error">
+                <p class="error">%s</p>
+                <table class="widefat">
+                    <thead>
+                        <tr>
+                            <th>Path</th>
+                            <th>Permissions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        %s
+                    </tbody>
+                </table>
+            </div>',
+            $error,
+            $pathPermissions
+        );
     }
 });
