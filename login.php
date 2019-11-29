@@ -7,11 +7,11 @@ function login_headerurl()
     return \get_bloginfo('url');
 }
 
-function login_headertitle()
+function login_headertext()
 {
     return \get_option('blogname');
 }
 
 add_filter('login_headerurl', __NAMESPACE__ . '\login_headerurl');
 
-add_filter('login_headertitle', __NAMESPACE__ . '\login_headertitle');
+add_filter('login_headertext', __NAMESPACE__ . '\login_headertext');
