@@ -4,7 +4,7 @@ Plugin Name: WP Tweaks
 Plugin Group: Configuration
 Plugin URI: https://github.com/webdeveric/wp-tweaks
 Description: Miscellaneous WordPress tweaks
-Version: 1.1.0
+Version: 1.1.1
 Author: Eric King
 Author URI: http://webdeveric.com/
 */
