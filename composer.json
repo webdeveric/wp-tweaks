@@ -15,7 +15,13 @@
       "role": "Developer"
     }
   ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "webdeveric/wordpress-muplugin-installer": true
+    }
+  },
   "require": {
-    "lplabs/wordpress-muplugin-installer": "^2.0"
+    "webdeveric/wordpress-muplugin-installer": "^3.0.0"
   }
 }
