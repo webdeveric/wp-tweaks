@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d73e2b1c7a9de02b2d9f09c11fcd7b19",
+    "content-hash": "fb4874d92e442062903149a391a3861e",
     "packages": [
         {
             "name": "composer/installers",
@@ -152,23 +152,97 @@
             "time": "2022-08-20T06:45:11+00:00"
         },
         {
-            "name": "webdeveric/wordpress-muplugin-installer",
-            "version": "3.0.0",
+            "name": "react/promise",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webdeveric/wordpress-muplugin-installer.git",
-                "reference": "6d925f7a1ce5dcc4722bc6e2a51aa9735ea7bc6c"
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webdeveric/wordpress-muplugin-installer/zipball/6d925f7a1ce5dcc4722bc6e2a51aa9735ea7bc6c",
-                "reference": "6d925f7a1ce5dcc4722bc6e2a51aa9735ea7bc6c",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "1.10.39 || 1.4.10",
+                "phpunit/phpunit": "^9.6 || ^7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "support": {
+                "issues": "https://github.com/reactphp/promise/issues",
+                "source": "https://github.com/reactphp/promise/tree/v3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/reactphp",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-11-16T16:21:57+00:00"
+        },
+        {
+            "name": "webdeveric/wordpress-muplugin-installer",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webdeveric/wordpress-muplugin-installer.git",
+                "reference": "bcdb20bc62b631b21e703506aa7be0ee171e4ded"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webdeveric/wordpress-muplugin-installer/zipball/bcdb20bc62b631b21e703506aa7be0ee171e4ded",
+                "reference": "bcdb20bc62b631b21e703506aa7be0ee171e4ded",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.0",
                 "composer/installers": "^2.2",
-                "php": ">=8"
+                "php": ">=8",
+                "react/promise": "^2.8 || ^3"
             },
             "require-dev": {
                 "composer/composer": "^2.7.1",
@@ -212,7 +286,7 @@
                 "issues": "https://github.com/webdeveric/wordpress-muplugin-installer/issues",
                 "source": "https://github.com/webdeveric/wordpress-muplugin-installer"
             },
-            "time": "2024-02-28T16:55:13+00:00"
+            "time": "2024-03-01T13:55:01+00:00"
         }
     ],
     "packages-dev": [],

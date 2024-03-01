@@ -22,6 +22,6 @@
     }
   },
   "require": {
-    "webdeveric/wordpress-muplugin-installer": "^3.0.0"
+    "webdeveric/wordpress-muplugin-installer": "^3.0.1"
   }
 }
