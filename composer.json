@@ -15,6 +15,12 @@
       "role": "Developer"
     }
   ],
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/webdeveric"
+    }
+  ],
   "config": {
     "allow-plugins": {
       "composer/installers": true,
